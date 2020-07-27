@@ -13,6 +13,7 @@ import {
   Tag,Tree,
   Select,Option,
   Cascader,
+  Alert,TabPane,Tabs
  } from 'element-ui'
 
 Vue.use(Button)
@@ -42,6 +43,9 @@ Vue.use(Tree)
 Vue.use(Select)
 Vue.use(Option)
 Vue.use(Cascader)
+Vue.use(Alert)
+Vue.use(TabPane)
+Vue.use(Tabs)
 
 //将弹框组件挂载到vue的原型上，使得每个组件都可以通过this.$message访问
 Vue.prototype.$message = Message;
