@@ -90,7 +90,6 @@
           <!--静态属性表格-->
           <el-table :data="onlyTableData" border stripe>
             <!--展开行-->
-            <!--展开行-->
             <el-table-column type="expand">
               <template slot-scope="scope">
                 <!--循环渲染Tag标签-->
@@ -330,9 +329,10 @@ export default {
           return this.$message.error("修改参数失败！");
         }
 
-        return this.$message.success("修改参数成功！");
-        this.getParamsData();
+        this.$message.success("修改参数成功！");
         this.editDialogVisible = false;
+        this.getParamsData();
+        
       });
     },
     //根据id删除对应的参数项
@@ -395,7 +395,7 @@ export default {
       row.inputVisible = true;
       //让文本框自动获得焦点
       //$nextTick 方法的作用，就是当页面上元素被重新渲染之后，才会执行回调函数中的代码
-      this.$nextTick(_=>{
+      this.$nextTick(_ =>{
         this.$refs.saveTagInput.$refs.input.focus()
       })
     },

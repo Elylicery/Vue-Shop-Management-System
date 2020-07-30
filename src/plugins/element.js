@@ -13,7 +13,9 @@ import {
   Tag,Tree,
   Select,Option,
   Cascader,
-  Alert,TabPane,Tabs
+  Alert,TabPane,Tabs,Steps,Step,
+  CheckboxGroup,Checkbox,
+  Upload,
  } from 'element-ui'
 
 Vue.use(Button)
@@ -46,6 +48,11 @@ Vue.use(Cascader)
 Vue.use(Alert)
 Vue.use(TabPane)
 Vue.use(Tabs)
+Vue.use(Step)
+Vue.use(Steps)
+Vue.use(Checkbox)
+Vue.use(CheckboxGroup)
+Vue.use(Upload)
 
 //将弹框组件挂载到vue的原型上，使得每个组件都可以通过this.$message访问
 Vue.prototype.$message = Message;
