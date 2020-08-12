@@ -1744,13 +1744,13 @@ methods
 
 创建新分支
 
-![image-20200724105748948](C:\Users\sxc\AppData\Roaming\Typora\typora-user-images\image-20200724105748948.png)
+![image-20200724105748948](Vue实战项目：电商管理系统.assets/image-20200724105748948.png)
 
 在远程创建新分支
 
 第一次创建加上`-u`参数
 
-![image-20200724105810706](C:\Users\sxc\AppData\Roaming\Typora\typora-user-images\image-20200724105810706.png)
+![image-20200724105810706](Vue实战项目：电商管理系统.assets/image-20200724105810706.png)
 
 ## 8.2 分类参数页面
 
