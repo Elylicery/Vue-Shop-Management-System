@@ -6,6 +6,14 @@
 
 电商管理系统，使用vue+elementUI，实现的功能有用户管理，权限管理，分类管理，参数管理，商品管理，数据统计。仓库内容包含源代码+个人总结笔记+参考资料
 
+## 界面预览
+
+<img src="README.assets/image-20200812210950450.png" alt="image-20200812210950450" style="zoom:80%;" />
+
+<img src="README.assets/image-20200812211017715.png" alt="image-20200812211017715" style="zoom:80%;" />
+
+![image-20200812211124224](README.assets/image-20200812211124224.png)
+
 ### 仓库内容
 
 | 文件夹              | 内容                      | 备注               |
