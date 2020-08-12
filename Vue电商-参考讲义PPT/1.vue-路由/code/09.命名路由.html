@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <!-- 导入 vue 文件 -->
+    <script src="./lib/vue_2.5.22.js"></script>
+    <script src="./lib/vue-router_3.0.2.js"></script>
+  </head>
+  <body>
+    <!-- 被 vm 实例所控制的区域 -->
+    <div id="app">
+      <router-link to="/user/1">User1</router-link>
+      <router-link to="/user/2">User2</router-link>
+      <router-link :to="{ name: 'user', params: {id: 3} }">User3</router-link>
+      <router-link to="/register">Register</router-link>
+
+      <!-- 路由占位符 -->
+      <router-view></router-view>
+    </div>
+
+    <script>
+      const User = {
+        props: ['id', 'uname', 'age'],
+        template: '<h1>User 组件 -- 用户id为: {{id}} -- 姓名为:{{uname}} -- 年龄为：{{age}}</h1>'
+      }
+
+      const Register = {
+        template: '<h1>Register 组件</h1>'
+      }
+
+      // 创建路由实例对象
+      const router = new VueRouter({
+        // 所有的路由规则
+        routes: [
+          { path: '/', redirect: '/user' },
+          {
+            // 命名路由
+            name: 'user',
+            path: '/user/:id',
+            component: User,
+            props: route => ({ uname: 'zs', age: 20, id: route.params.id })
+          },
+          { path: '/register', component: Register }
+        ]
+      })
+
+      // 创建 vm 实例对象
+      const vm = new Vue({
+        // 指定控制的区域
+        el: '#app',
+        data: {},
+        // 挂载路由实例对象
+        // router: router
+        router
+      })
+    </script>
+  </body>
+</html>

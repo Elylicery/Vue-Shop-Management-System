@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <!-- 导入 vue 文件 -->
+    <script src="./lib/vue_2.5.22.js"></script>
+  </head>
+  <body>
+    <!-- 被 vue 实例控制的 div 区域 -->
+    <div id="app">
+
+      <!-- 切换组件的超链接 -->
+      <a href="#/zhuye">主页</a>
+      <a href="#/keji">科技</a>
+      <a href="#/caijing">财经</a>
+      <a href="#/yule">娱乐</a>
+
+      <!-- 根据 :is 属性指定的组件名称，把对应的组件渲染到 component 标签所在的位置 -->
+      <!-- 可以把 component 标签当做是【组件的占位符】 -->
+      <component :is="'zhuye'"></component>
+    </div>
+
+    <script>
+      // #region 定义需要被切换的 4 个组件
+      // 主页组件
+      const zhuye = {
+        template: '<h1>主页信息</h1>'
+      }
+
+      // 科技组件
+      const keji = {
+        template: '<h1>科技信息</h1>'
+      }
+
+      // 财经组件
+      const caijing = {
+        template: '<h1>财经信息</h1>'
+      }
+
+      // 娱乐组件
+      const yule = {
+        template: '<h1>娱乐信息</h1>'
+      }
+      // #endregion
+
+      // #region vue 实例对象
+      const vm = new Vue({
+        el: '#app',
+        data: {
+          comName: 'keji'
+        },
+        // 注册私有组件
+        components: {
+          zhuye,
+          keji,
+          caijing,
+          yule
+        }
+      })
+      // #endregion
+
+      // 监听 window 的 onhashchange 事件，根据获取到的最新的 hash 值，切换要显示的组件的名称
+      window.onhashchange = function() {
+        // 通过 location.hash 获取到最新的 hash 值
+      }
+    </script>
+  </body>
+</html>

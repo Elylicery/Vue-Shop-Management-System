@@ -71,6 +71,7 @@ export default {
     this.activePath = window.sessionStorage.getItem('activePath');
   },
   methods: {
+    //退出
     logout() {
       //清空token
       window.sessionStorage.clear();
