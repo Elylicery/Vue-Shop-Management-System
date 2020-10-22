@@ -1,5 +1,8 @@
 # Vue-Shop-Management-System
 
+本项目预览地址：http://59.110.64.140/shop/
+（可以在我的阿里云上预览该项目 初始用户和密码都为admin）
+
 ## 项目简介
 
 ***
@@ -28,7 +31,7 @@
 
 https://www.bilibili.com/video/BV1EE411B7SU?from=search&seid=12483849486304322239
 
-## Project setup
+## 如何使用该项目
 
 ***
 
@@ -36,20 +39,13 @@ https://www.bilibili.com/video/BV1EE411B7SU?from=search&seid=1248384948630432223
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### 开发时用到的编译和热加载（启动项目）
+
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+### 生成生产版本（这里生成的dist文件可以部署到服务器上来直接访问）
 ```
 npm run build
 ```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
